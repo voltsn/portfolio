@@ -1,3 +1,5 @@
+import ProfileImage from '../../../public/profile.webp';
+
 export default function() {
     return (
         <section>
@@ -27,7 +29,7 @@ export default function() {
                 </p>
             </div>
             <div>
-                <img src="" alt="picture of arno volts"/>
+                <img src={ProfileImage} alt="picture of arno volts"/>
             </div>
         </section>
     );
