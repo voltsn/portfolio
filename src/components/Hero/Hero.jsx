@@ -35,7 +35,7 @@ export default function () {
                         <img 
                             aria-hidden="true" 
                             src={longArrow} 
-                            alt="long right point arrow"
+                            alt="long right pointing arrow"
                         /> 
                         <a>View my work</a>
                     </p>
