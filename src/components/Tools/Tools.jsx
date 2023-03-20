@@ -6,17 +6,54 @@ import githubIcon from '../../assets/github-alt.svg';
 import gitIcon from '../../assets/git-alt.svg';
 import dbIcon from '../../assets/database.svg';
 
-export default function() {
+function ToolsItem({icon, label, iconDescription}) {
+
+    return (
+       <li><img src={icon} alt={iconDescription}/>{label}</li> 
+    );
+}
+
+export default function Tools() {
     return (
         <section>
-            <h3>Tools of the trade</h3>
+            <h2>Tools of the trade</h2>
             <div>
                 <ul>
-                    <li><img src={laravelIcon} alt="Laravel logo"/> Laravel </li>
-                    <li><img src={reactIcon} alt="reactIcon"/> ReactJS </li>
-                    <li><img src={cssIcon} alt="css3 logo"/> CSS3 </li>
-                    <li><img src={htmlIcon} alt="HTML logo"/>HTML5</li>
-        
+                    <ToolsItem 
+                        icon={laravelIcon} 
+                        iconDescription={"laravel Logo"} 
+                        label={"Laravel"}
+                    />
+                    <ToolsItem 
+                        icon={reactIcon}
+                        iconDescription={"React.js Logo"}
+                        label={"React.js"}
+                    />
+                    <ToolsItem 
+                        icon={cssIcon}
+                        iconDescription={"CSS 3 Logo"}
+                        label={"CSS3"}
+                    />
+                    <ToolsItem 
+                        icon={htmlIcon}
+                        iconDescription={"HTML 5 Logo"}
+                        label={"HTML5"}
+                    />
+                    <ToolsItem
+                        icon={githubIcon}
+                        iconDescription={"Github Logo"}
+                        label={"Github"}
+                    />
+                    <ToolsItem
+                        icon={gitIcon}
+                        iconDescription={"Git Logo"}
+                        label={"Git"}
+                    />
+                    <ToolsItem
+                        icon={dbIcon}
+                        iconDescription={"Database icon"}
+                        label={"Sql"}
+                    />
                 </ul>
             </div>
         </section>
