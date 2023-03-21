@@ -1,6 +1,6 @@
-import ProfileImage from '../../../public/profile.webp';
+import ProfileImage from '/profile.webp';
 
-export default function() {
+export default function About() {
     return (
         <section>
             <div>
