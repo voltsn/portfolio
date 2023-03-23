@@ -14,7 +14,7 @@ function Preview({text, link, linkLabel}) {
 
 export default function Hero () {
     return (
-        <section>
+        <section id='hero'>
             <h1>
                 Arno N. Volts
                 <span>Junior Web Developer</span>

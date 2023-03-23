@@ -2,7 +2,7 @@ import ProfileImage from '/profile.webp';
 
 export default function About() {
     return (
-        <section>
+        <section id='about'>
             <div>
                 <h2>About Me</h2>
                 <p> 
