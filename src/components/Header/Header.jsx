@@ -1,14 +1,16 @@
+import Menu from '../Menu/Menu';
+
 export default function Header() {
+    const menuItems = [
+        {label: 'Home', link: '#'},
+        {label: 'About', link: '#'},
+        {label: 'Project', link: '#'},
+        {label: 'Contact', link:'#'}
+    ]
+
     return (
         <header>
-            <nav>
-                <ul>
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Project</a></li>
-                    <li><a>Contact</a></li>
-                </ul>
-            </nav> 
+            <Menu menuItems={menuItems} />
         </header>
     )
 }
