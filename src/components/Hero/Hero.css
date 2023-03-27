@@ -1,0 +1,90 @@
+.hero{
+    padding-top: 3.125rem;
+    position: relative;
+    margin-bottom: 9.125rem;
+}
+
+.hero__heading{
+    font-size: clamp(3.4375rem, 2.465rem + 4.2056vw, 6.25rem);
+    font-weight: 300;
+    margin-bottom: .9em;
+    margin-bottom: 1.5em;
+}
+
+.hero__subHeading{
+    display: block;
+    font-size: clamp(2.1875rem, 1.5607rem + 2.7103vw, 4rem);
+    font-weight: 100;
+}
+
+.previews{
+    display: flex;
+    flex-direction: column;
+    gap: 5.5em;
+}
+
+.preview{
+    font-size: 1.5rem;
+    font-size: clamp(1.125rem, 0.9953rem + 0.5607vw, 1.5rem);
+    font-weight: 300;
+    max-width: 38.75rem;
+}
+
+.preview:nth-child(odd) {
+    align-self: end;
+}
+
+.preview__link{
+    align-items: center;
+    display: flex;
+    gap: 1.4em;
+    margin-top: 1.125em;
+}
+
+.preview__link a{
+    color: #fff;
+    transition: font-weight ease 300ms;
+}
+
+.preview__link a:hover{
+    font-weight: 800;
+}
+
+.gradientCircle{
+    position: absolute;
+    z-index: -1;
+}
+
+.gradientCircle.top{
+    top: 0;
+    left: 0;
+    transform: translate(-60%, -40%);
+}
+
+.gradientCircle.bottom{
+    right: 0;
+    bottom: 0;
+    transform: translate(60%, 40%);
+}
+
+@media screen and (min-width: 41rem) {
+    .hero {
+        padding-top: 4.9rem;
+        margin-bottom: 9.125em;
+    }
+
+    .gradientCircle{
+        /* width: 50vw;
+        height: 50vw; */
+    }
+
+    /* .gradientCircle.top{
+        top: -22vw;
+        left: -22vw;
+    }
+    
+    .gradientCircle.bottom{
+        right: -22.5vw;
+        bottom: -22.5vw;
+    } */
+}
