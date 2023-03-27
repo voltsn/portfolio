@@ -1,4 +1,6 @@
+import './Header.css';
 import Menu from '../Menu/Menu';
+import ResponsiveMenu from '../ResponsiveMenu/ResponsiveMenu';
 
 export default function Header() {
     const menuItems = [
@@ -9,8 +11,8 @@ export default function Header() {
     ]
 
     return (
-        <header>
-            <Menu menuItems={menuItems} />
+        <header className='main-header container'>
+            <ResponsiveMenu menuItemsClass={{nav: 'main-header__nav', navItem: 'main-header__nav__items__item', navItems: 'main-header__nav__items'}} menuItems={menuItems} />
         </header>
     )
 }
