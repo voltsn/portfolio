@@ -1,13 +1,13 @@
-function MenuItem({label, link}) {
-    return <li><a href={link}>{label}</a></li>;
-}
-
-export default function Menu({menuItems}) {
+export default function Menu({menuItems, className }) {
     return (
-        <nav>
-            <ul>
-                {menuItems.map(item => (<MenuItem label={item.label} 
-                                                  link={item.link}/>))}
+        <nav className={className.nav}>
+            <ul className={className.navItems}>
+                {menuItems.map(item => 
+                (
+                    <li className={className.navItem} key={crypto.randomUUID()}>
+                        <a href={item.link}>{item.label}</a>
+                    </li>
+                ))}
             </ul>
         </nav>
     );
