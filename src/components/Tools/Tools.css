@@ -1,0 +1,34 @@
+.tools{
+    padding-bottom: 94px;
+}
+
+.tools__heading{
+    background-clip: text;
+    background-image: url('../../assets/mesh-gradient.svg');
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    color: transparent;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 1.2em;
+    -webkit-background-clip: text;
+}
+
+.toolsList,
+.toolsList li{
+    align-items: center;
+    display: flex;
+}
+
+.toolsList{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.toolsList li{
+    font-size: 1.5rem;
+    font-weight: 200;
+    gap: .5em;
+}
