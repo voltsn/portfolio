@@ -18,21 +18,80 @@
                 <a href="#">Contact</a>
             </li>
         </ul>
+        <button class="hamburger">
+            <span class='line top'></span>
+            <span class='line middle'></span>
+            <span class='line bottom'></span>
+        </button>
     </nav>
     
-    <button class="hamburger">
-        <span class='line top'></span>
-        <span class='line middle'></span>
-        <span class='line bottom'></span>
-    </button>
 </header>
 
 <style>
     .main-header{
+        margin-bottom: 4.5625rem;
+    }
+
+    .main-header__nav{
+        position: fixed;
+        padding: 2.5625rem 2.5% 0 2.5%;
+        right: 0;
+        top: 0;
+        z-index: 1;
         display: flex;
         justify-content: flex-end;
-        padding-top: 2.5625rem;
-        margin-bottom: 2.5625rem;
+    }
+
+    .main-header__nav__items{
+        position: relative;
+        display: flex;
+        font-size: 1.375rem;
+        font-weight: 500;
+        gap: 0.94em;
+        justify-content: end;
+        list-style: none;
+    }
+
+    .main-header__nav__items__item{
+        transition: font-weight ease 300ms;
+    }
+
+    .main-header__nav__items__item > a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .main-header__nav__items__item > a:hover{
+        font-weight: 300;
+    }
+    
+    .main-header__nav > .main-header__nav__items{
+        display: none;
+    }
+
+    .main-header__nav.active{
+        background-color: #000;
+        height: 100vh;
+        right: 0;
+        max-width: 81.7rem;
+        width: 100%;
+    }
+
+    .main-header__nav.active > .main-header__nav__items{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .main-header__nav.active .main-header__nav__items{
+        flex-direction: column;
+        font-size: 33px;
     }
 
     .hamburger {
@@ -53,79 +112,65 @@
         width: 100%;
     }
 
-    .hamburger > .top{
-        top: 0;
+    .hamburger .top, .hamburger .bottom{
         transform: translateX(-50%);
+        transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 500ms, top cubic-bezier(0.075, 0.82, 0.165, 1) 500ms, bottom cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+    }
+
+    .hamburger .top{
+        top: 0;
         left: 50%;
     }
 
-    .hamburger > .middle{
+    .hamburger .middle{
+        top: 50%;
         right: 0;
+        transform: translateY(-50%);
+        transition: opacity ease 300ms;
         width: 60%;
     }
 
-    .hamburger > .bottom {
+    .hamburger .bottom {
         bottom: 0;
-        transform: translateX(-50%);
         left: 50%;
     }
 
-    .main-header__nav{
-        display: none;
+    .hamburger.close .middle{
+        opacity: 0;
     }
 
-    .main-header__nav.active{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #000;
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        right: 0;
-        top: 0;
-        z-index: 1;
+    .hamburger.close .top{
+        top: 50%;
+        transform: translateX(-50%) rotate(45deg);
     }
 
-    .main-header__nav__items{
-        position: relative;
-        display: flex;
-        font-size: 1.375rem;
-        font-weight: 500;
-        gap: 0.94em;
-        justify-content: end;
-        list-style: none;
-    }
-
-    .main-header__nav.active .main-header__nav__items{
-        flex-direction: column;
-        font-size: 33px;
+    .hamburger.close .bottom{
+        bottom: unset;
+        top: 50%;
+        transform: translateX(-50%) rotate(-45deg);
     }
 
 
-    .main-header__nav__items__item{
-        transition: font-weight ease 300ms;
-    }
 
-    .main-header__nav__items__item > a{
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .main-header__nav__items__item:hover{
-        font-weight: 300;
-    }
-
-    @media screen and (min-width: 500px) {
-        .main-header__nav {
-            display: block;
-        }
+    @media screen and (min-width: 31.25rem) {
 
         .main-header__nav.active{
             background-color: unset;
+            height: unset;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-left: 0;
+            padding-right: 0;
+            width: 95%;
+        }
+        
+        .main-header__nav.active .main-header__nav__items {
             position: unset;
             height: unset;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            transform: none;
         }
 
         .main-header__nav.active .main-header__nav__items{
@@ -147,12 +192,14 @@
     const nav = document.querySelector('.main-header__nav');
     const navItems = document.querySelectorAll('.main-header__nav__items__item');
 
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', (e) => {
+        hamburger.classList.toggle('close');
         nav.classList.toggle('active');
     });
 
     navItems.forEach(item => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
+            hamburger.classList.remove('close');
             nav.classList.remove('active');
         });
     });
