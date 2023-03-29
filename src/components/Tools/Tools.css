@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     background-size: 200%;
     color: transparent;
-    font-size: 4rem;
+    font-size: clamp(2.75rem, 2.3178rem + 1.8692vw, 4rem);
     font-weight: 300;
     margin-bottom: 1.2em;
     -webkit-background-clip: text;
