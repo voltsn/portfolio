@@ -40,16 +40,13 @@
         z-index: 1;
         display: flex;
         justify-content: flex-end;
+        max-width: 81.87rem;
     }
 
     .main-header__nav__items{
-        position: relative;
-        display: flex;
         font-size: 1.375rem;
         font-weight: 500;
         gap: 0.94em;
-        justify-content: end;
-        list-style: none;
     }
 
     .main-header__nav__items__item{
@@ -73,7 +70,6 @@
         background-color: #000;
         height: 100vh;
         right: 0;
-        max-width: 81.7rem;
         width: 100%;
     }
 
@@ -83,15 +79,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
+        font-size: 33px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    }
-
-
-    .main-header__nav.active .main-header__nav__items{
-        flex-direction: column;
-        font-size: 33px;
     }
 
     .hamburger {
@@ -153,7 +144,15 @@
 
 
     @media screen and (min-width: 31.25rem) {
+        .main-header__nav > .main-header__nav__items,
+        .main-header__nav.active .main-header__nav__items{
+            display: flex;
+            position: static;
+            /* top: unset;
+            right: unset; */
+        }
 
+        .main-header__nav,
         .main-header__nav.active{
             background-color: unset;
             height: unset;
@@ -165,8 +164,6 @@
         }
         
         .main-header__nav.active .main-header__nav__items {
-            position: unset;
-            height: unset;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
