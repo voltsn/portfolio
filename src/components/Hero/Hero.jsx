@@ -27,7 +27,7 @@ export default function Hero () {
                     text="Lorem ipsum dolor sit amet, consectetur adipiscing 
                           elit, sed do eiusmod tempor incididunt ut labore et
                           dolore magnaa liqua."
-                    link="#aboutme"
+                    link="#about"
                     linkLabel="Learn more about me"
                     className={{article: 'preview', p: 'preview__description', div: 'preview__link'}}
                 />
