@@ -30,10 +30,6 @@
     max-width: 38.75rem;
 }
 
-.preview:nth-child(odd) {
-    align-self: end;
-}
-
 .preview__link{
     align-items: center;
     display: flex;
@@ -73,18 +69,10 @@
         margin-bottom: 9.125em;
     }
 
-    .gradientCircle{
-        /* width: 50vw;
-        height: 50vw; */
-    }
+}
 
-    /* .gradientCircle.top{
-        top: -22vw;
-        left: -22vw;
+@media screen and (min-width: 50rem) {
+    .preview:nth-child(odd) {
+        align-self: end;
     }
-    
-    .gradientCircle.bottom{
-        right: -22.5vw;
-        bottom: -22.5vw;
-    } */
 }
