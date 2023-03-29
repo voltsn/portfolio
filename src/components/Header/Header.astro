@@ -1,0 +1,159 @@
+---
+
+
+---
+<header class="main-header container">
+    <nav class="main-header__nav">
+        <ul class="main-header__nav__items">
+            <li class="main-header__nav__items__item">
+                <a href="#hero">Home</a>
+            </li>
+            <li class="main-header__nav__items__item">
+                <a href="#about">About</a>
+            </li>
+            <li class="main-header__nav__items__item">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="main-header__nav__items__item">
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <button class="hamburger">
+        <span class='line top'></span>
+        <span class='line middle'></span>
+        <span class='line bottom'></span>
+    </button>
+</header>
+
+<style>
+    .main-header{
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 2.5625rem;
+        margin-bottom: 2.5625rem;
+    }
+
+    .hamburger {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        height: 25px;
+        position: relative;
+        width: 35px;
+        z-index: 1;
+    }
+
+    .hamburger .line{
+        background-color: #fff;
+        display: inline-block;
+        height: 2px;
+        position: absolute;
+        width: 100%;
+    }
+
+    .hamburger > .top{
+        top: 0;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    .hamburger > .middle{
+        right: 0;
+        width: 60%;
+    }
+
+    .hamburger > .bottom {
+        bottom: 0;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    .main-header__nav{
+        display: none;
+    }
+
+    .main-header__nav.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .main-header__nav__items{
+        position: relative;
+        display: flex;
+        font-size: 1.375rem;
+        font-weight: 500;
+        gap: 0.94em;
+        justify-content: end;
+        list-style: none;
+    }
+
+    .main-header__nav.active .main-header__nav__items{
+        flex-direction: column;
+        font-size: 33px;
+    }
+
+
+    .main-header__nav__items__item{
+        transition: font-weight ease 300ms;
+    }
+
+    .main-header__nav__items__item > a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .main-header__nav__items__item:hover{
+        font-weight: 300;
+    }
+
+    @media screen and (min-width: 500px) {
+        .main-header__nav {
+            display: block;
+        }
+
+        .main-header__nav.active{
+            background-color: unset;
+            position: unset;
+            height: unset;
+        }
+
+        .main-header__nav.active .main-header__nav__items{
+            flex-direction: unset;
+            font-size: 1.375rem;
+            padding-left: unset;
+            padding-top: unset;
+        }
+
+
+        .hamburger{
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.main-header__nav');
+    const navItems = document.querySelectorAll('.main-header__nav__items__item');
+
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    });
+</script>
