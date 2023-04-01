@@ -15,19 +15,24 @@
     -webkit-background-clip: text;
 }
 
-.toolsList,
+.toolsList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 5em);
+    justify-content: space-between;
+    row-gap: 2em;
+}
+
 .toolsList li{
     align-items: center;
     display: flex;
-}
-
-.toolsList{
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.toolsList li{
-    font-size: 1.5rem;
+    flex-direction: column;
+    font-size: 1rem;
     font-weight: 200;
     gap: .5em;
+}
+
+@media screen and (min-width: 48rem) {
+    .toolsList li{
+        font-size: 1.5rem;
+    }
 }
