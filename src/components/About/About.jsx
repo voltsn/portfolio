@@ -8,26 +8,19 @@ export default function About() {
             <div className='about__content'>
                 <div className='about__text'>
                     <p className='about__text__paragraph'> 
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna 
-                        aliqua. Urna porttitor rhoncus dolor purus non enim praesent
-                        elementum facilisis.
+                        Hi, I am Arno. A web artisan based in the city of Namur in Belgium. I'm currently enrolled in an intensive 7 month long bootcamp at <a href="https://becode.org/" taregt="_blank">becode</a> where I learn the art of crafting web applications. 
                     </p>
                     
                     <p className='about__text__paragraph'>
-                        Quis eleifend quam adipiscing vitae proin sagittis nisl
-                        rhoncus. Sodales ut eu sem integer vitae justo eget magna
-                        fermentum.Dictumst quisque sagittis purus sit amet volutpat 
-                        consequat mauris. Sit amet est placerat in egestas erat 
-                        imperdiet sed. 
+                        In addition to web development, I enjoy reading books and occasionally playing chess. I find that these hobbies help me stay creative and intellectually stimulated, which translates to my work as a developer.
                     </p>
 
                     <p className='about__text__paragraph'>
-                        Eu tincidunt tortor aliquam nulla facilisi cras fermentum
-                        odio. Ultrices dui sapien eget mi proin sed libero. 
-                        Purus gravida quis blandit turpis cursus. Amet nisl purus
-                        in mollis nunc lsed id semper.Quis blandit turpis cursus in
-                        hac habitasse platea dictumst. 
+                        My goal is to use my skills and knowledge to build innovative and user-friendly websites that meet my clients's needs. I believe that the best websites are not only functional but also visually appealing and easy to use.
+                    </p>
+
+                    <p className='about__text__paragraph'>
+                        Thank you for visiting my website, and I look forward to the opportunity to work with you!
                     </p>
                 </div>
                 <div className='about__img'>
