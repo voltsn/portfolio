@@ -7,7 +7,7 @@ function Preview({text, link, linkLabel, className}) {
         <article className={className.article}>
             <p className={className.p}>{text}</p>
             <div className={className.div}>
-                <img src={longArrow} alt="Long right pointing arrow"/>
+                <img src={longArrow} alt="Long right pointing arrow" width="102" height="22"/>
                 <a href={link}>{linkLabel}</a>
             </div>
         </article>

@@ -11,7 +11,7 @@ import phpIcon from '../../assets/icons/tools/php.svg';
 function ToolsItem({icon, label, iconDescription}) {
 
     return (
-       <li key={crypto.randomUUID()}><img src={icon} alt={iconDescription}/>{label}</li> 
+       <li key={crypto.randomUUID()}><img src={icon} alt={iconDescription} width="35" height="35"/>{label}</li> 
     );
 }
 
