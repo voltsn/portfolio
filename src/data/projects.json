@@ -4,21 +4,21 @@
             "title": "The Collection",
             "tags": ["HTML5", "SCSS", "Javascript"],
             "description": "A webpage containing a list of some of my favorite movies. This project was build as part of my training as a junior web developer @BeCode. I was in charge of designing and coding the web page.",
-            "image": "https://github.com/voltsn/collection/blob/main/screenshot.png?raw=true",
+            "image": "./images/projects/mod_theCollection.webp",
             "link": {"live": "https://voltsn.github.io/collection/", "github": "https://github.com/voltsn/collection"}
         },
         {
             "title": "Tenki - Weather App",
             "tags": ["HTML5", "Javascript", "SCSS", "Vite"],
             "description": "A weather application that allows users to view the weekly weather predictions of a given city, it uses the openweather api in order to get the data. This project was build as part of my training as a junior web developer @BeCode. I was in charge of designing and coding the web page.",
-            "image": "https://github.com/voltsn/weather-app/blob/main/screenshot.png?raw=true",
+            "image": "./images/projects/mod_weatherApp.webp",
             "link": {"live": "https://spontaneous-tartufo-6a966e.netlify.app/", "github": "https://github.com/voltsn/weather-app"}
         },
         {
             "title": "Hackers Poulette",
             "tags":["HTML5", "Javascript", "PHP", "Tailwind", "mySql"],
             "description": "A contact page for a fictional company called Hackers Poulette, that sells raspberry pi's. It contains a form that allow users to contact the support team, google reCaptcha is used for protection against bots. This project was build as part of my training as a junior web developer @BeCode. I was in charge of designing and coding the web page.",
-            "image": "https://github.com/voltsn/hackers-poulette/blob/main/screenshot.png?raw=true",
+            "image": "./images/projects/mod_hackersPoulette.webp",
             "link": {"live": "http://hackers-poulette.infinityfreeapp.com/", "github": "https://github.com/voltsn/hackers-poulette"}
         }
     ]
