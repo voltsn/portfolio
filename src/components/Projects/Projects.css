@@ -1,0 +1,78 @@
+.projects__heading{
+    font-size: clamp(2.75rem, 2.3178rem + 1.8692vw, 4rem);
+    font-weight: 300;
+    margin-bottom: 1.2em;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.project + .project {
+    margin-top: 5rem;
+}
+
+.project__header__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+.project__heading{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.project__tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4em;
+}
+
+.project__text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.project__description{
+    flex-grow: 1;
+    font-size: clamp(1rem, 0.8703rem + 0.5607vw, 1.375rem);
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.project__links{
+    display: flex;
+    font-size: clamp(1rem, 0.8703rem + 0.5607vw, 1.375rem);
+    gap: .8em;
+}
+
+.project__links a{
+    color: #fff;
+    transition: font-weight 500ms ease;
+}
+
+.project__links a:hover{
+    font-weight: 600;
+}
+
+.tag{
+    font-size: 1.1rem;
+    border: 1px solid #5A5A5A;
+    border-radius: 8px;
+    padding: .5em .8em;
+}
+
+@media screen and (min-width: 50rem){
+    .project{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .project > * {
+        width: calc(50% - 2rem);
+    }
+}
