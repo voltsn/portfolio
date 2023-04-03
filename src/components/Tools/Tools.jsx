@@ -1,11 +1,12 @@
 import './Tools.css';
-import laravelIcon  from '../../assets/laravel.svg';
-import reactIcon from '../../assets/react.svg';
-import cssIcon from '../../assets/css3.svg';
-import htmlIcon from '../../assets/html5.svg';
-import githubIcon from '../../assets/github-alt.svg';
-import gitIcon from '../../assets/git-alt.svg';
-import dbIcon from '../../assets/database.svg';
+import laravelIcon  from '../../assets/icons/tools/laravel.svg';
+import reactIcon from '../../assets/icons/tools/react.svg';
+import cssIcon from '../../assets/icons/tools/css3.svg';
+import htmlIcon from '../../assets/icons/tools/html5.svg';
+import githubIcon from '../../assets/icons/tools/github-alt.svg';
+import gitIcon from '../../assets/icons/tools/git-alt.svg';
+import dbIcon from '../../assets/icons/tools/database.svg';
+import phpIcon from '../../assets/icons/tools/php.svg';
 
 function ToolsItem({icon, label, iconDescription}) {
 
@@ -39,6 +40,11 @@ export default function Tools() {
                         icon={htmlIcon}
                         iconDescription={"HTML 5 Logo"}
                         label={"HTML5"}
+                    />
+                    <ToolsItem
+                        icon={phpIcon}
+                        iconDescription={"PHP logo"}
+                        label={"PHP"}
                     />
                     <ToolsItem
                         icon={githubIcon}
