@@ -24,18 +24,14 @@ export default function Hero () {
             
             <div className='previews'>
               <Preview
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing 
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magnaa liqua."
+                    text="I am a web artisan based in Namur, Belgium. Currently looking for an internship starting the 29th of may 2023."
                     link="#about"
                     linkLabel="Learn more about me"
                     className={{article: 'preview', p: 'preview__description', div: 'preview__link'}}
                 />
 
               <Preview 
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing 
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magnaa liqua."
+                    text="As part of my training as junior web developer at becode. I had the possibility to work on multiple projects, solo and with teammates."
                     link="#projects"
                     linkLabel="View my work"
                     className={{article: 'preview', p: 'preview__description', div: 'preview__link'}}
