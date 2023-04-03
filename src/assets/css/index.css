@@ -33,6 +33,9 @@ ul {
     list-style: none;
 }
 
+a{
+    color: #fff;
+}
 
 .container{
     margin: 0 auto;
