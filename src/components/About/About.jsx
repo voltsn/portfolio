@@ -1,5 +1,5 @@
 import './About.css';
-import ProfileImage from '/profile.webp';
+import ProfileImage from '/mod_profile.webp';
 
 export default function About() {
     return (
