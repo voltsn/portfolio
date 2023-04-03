@@ -1,5 +1,5 @@
 import './Hero.css';
-import longArrow from '../../assets/longArrow.svg';
+import longArrow from '../../assets/icons/ui/longArrow.svg';
 import gradientCircle from '../../assets/gradient-circle.svg';
 
 function Preview({text, link, linkLabel, className}) {
