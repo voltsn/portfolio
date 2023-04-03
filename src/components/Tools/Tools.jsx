@@ -10,7 +10,7 @@ import dbIcon from '../../assets/database.svg';
 function ToolsItem({icon, label, iconDescription}) {
 
     return (
-       <li><img src={icon} alt={iconDescription}/>{label}</li> 
+       <li key={crypto.randomUUID()}><img src={icon} alt={iconDescription}/>{label}</li> 
     );
 }
 

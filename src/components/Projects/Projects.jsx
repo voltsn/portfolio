@@ -3,7 +3,7 @@ import "./Projects.css";
 
 function Tag({label}) {
     return (
-        <li><span className="tag">{label}</span></li>
+        <span className="tag">{label}</span>
     );
 }
 
@@ -16,12 +16,14 @@ function Project({title, image, tags, description, link}) {
             <div className="project__text">
                 <h3 className="project__heading">{title}</h3>
                 <ul className="project__tags">
-                    {tags.map((tag) => (<Tag label={tag} />))}
+                    {tags.map((tag) => (<li key={crypto.randomUUID()}><Tag label={tag} /></li>))}
                 </ul>
                 <p className="project__description">{description}</p>
                 <ul className="project__links">
-                    <li><a href={link.live} target="_blank">View live demo</a></li>
-                    <li>
+                    <li key={crypto.randomUUID()}>
+                        <a href={link.live} target="_blank">View live demo</a>
+                    </li>
+                    <li key={crypto.randomUUID()}>
                         <a href={link.github} target="_blank">View code on github</a>
                     </li>
                 </ul>
