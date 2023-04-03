@@ -1,8 +1,9 @@
 import listOfProjects from "../../data/projects.json"; 
+import "./Projects.css";
 
 function Tag({label}) {
     return (
-        <li className="tag"><span>{label}</span></li>
+        <li><span className="tag">{label}</span></li>
     );
 }
 
@@ -10,10 +11,10 @@ function Project({title, image, tags, description, link}) {
     return (
         <article className="project">
             <header className="project__header">
-                <img className="project__header__gif" src={image} alt="project gif" />
+                <img className="project__header__img" src={image} alt="project gif" />
             </header>
-            <div>
-                <h3>{title}</h3>
+            <div className="project__text">
+                <h3 className="project__heading">{title}</h3>
                 <ul className="project__tags">
                     {tags.map((tag) => (<Tag label={tag} />))}
                 </ul>
@@ -33,7 +34,7 @@ export default function Projects() {
 
     return (
         <section className="projects container" id="projects">
-            <h2> Projects </h2>
+            <h2 className="projects__heading"> Projects </h2>
             <div className="projects__container">
                 {listOfProjects.projects.map((project) => (<Project {...project} />))}
             </div>
