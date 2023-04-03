@@ -4,7 +4,7 @@
 ---
 <header class="main-header container">
     <nav class="main-header__nav">
-        <ul class="main-header__nav__items">
+        <ul id="main-nav" class="main-header__nav__items">
             <li class="main-header__nav__items__item">
                 <a href="#hero">Home</a>
             </li>
@@ -18,7 +18,7 @@
                 <a href="#">Contact</a>
             </li>
         </ul>
-        <button class="hamburger">
+        <button class="hamburger" role="button" aria-label="toggle-navigation" aria-expanded="false" aria-controls="main-nav">
             <span class='line top'></span>
             <span class='line middle'></span>
             <span class='line bottom'></span>
@@ -188,14 +188,18 @@
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('.main-header__nav');
     const navItems = document.querySelectorAll('.main-header__nav__items__item');
+    let isVisibile = false;
 
-    hamburger.addEventListener('click', (e) => {
+    hamburger.addEventListener('click', () => {
+        isVisibile = !isVisibile;
         hamburger.classList.toggle('close');
+        hamburger.setAttribute("aria-expanded",  `${isVisibile}`);
         nav.classList.toggle('active');
+        console.log(hamburger.getAttribute("aria-expanded"));
     });
 
     navItems.forEach(item => {
-        item.addEventListener('click', (e) => {
+        item.addEventListener('click', () => {
             hamburger.classList.remove('close');
             nav.classList.remove('active');
         });
