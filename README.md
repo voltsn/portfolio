@@ -14,4 +14,4 @@ The tools I used for this project are:
 - React.js
 - Astro.js
 
-I am currently working on improving perfomace issues.
+The site can be visited at [arnovolts.be](https://arnovolts.be/)
